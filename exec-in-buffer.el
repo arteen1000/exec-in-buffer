@@ -1,4 +1,4 @@
-;;; exec-in-buffer.el --- Choose programs to execute on buffers in projects
+;;; exec-in-buffer.el --- Choose programs to execute on buffers in projects -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2025 Arteen Abrishami
 
@@ -6,7 +6,7 @@
 ;; Maintainer: Arteen Abrishami <arteen@ucla.edu>
 ;; URL: https://github.com/arteen1000/exec-in-buffer
 ;; Version: 0.0.1
-;; Package-Requires ((emacs "24.1"))
+;; Package-Requires: ((emacs "24.1"))
 ;; Keywords: tools, c, c++, formatting, projects
 
 ;; This file is not a part of GNU Emacs.
