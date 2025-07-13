@@ -1,6 +1,6 @@
 # exec-in-buffer.el
 
-For files matching your choice of regular expression, runs your specified programs with arguments and reverts the buffer, on-save. Works for remote/local buffers. Can make the configuration project local.
+For files matching your choice of regular expression, runs your specified programs with arguments and reverts the Emacs buffer, on-save. Works for remote/local buffers. Can make the configuration project local.
 
 # Usage
 
@@ -32,3 +32,9 @@ then it will no longer do so for `.cc`/`.h`/`.py` files under that particular pr
 If a file matches multiple regexp, it will apply the programs in the order of the regexp matches as you specified in the alist.
 
 You can also run it interactively with `exec-in-buffer`, instead of using the save hook.
+
+# Why this package?
+
+You could of course use designated packages such as [clang-format-lite](https://github.com/arteen1000/clang-format-lite/) for your formatting needs; however, this one allows you to hook up arbitrary scripts to run "on-save" and format your buffer, reverting your view.
+
+As a general example, you might have a project `clang-format-commit.sh` script that runs on commit in a specific manner, perhaps not supported by the other code-formatting Elisp package and you could set something like that up for `*.cc` and `*.h` files.
