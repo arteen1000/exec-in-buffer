@@ -2,7 +2,23 @@
 
 For files matching your choice of regular expression, runs your specified programs with arguments and reverts the Emacs buffer, on-save. Works for remote/local buffers. Can make the configuration project local.
 
-# Usage
+## Getting Started
+
+The package may be installed through [MELPA](https://www.emacswiki.org/emacs/MELPA). I recommend [use-package](https://jwiegley.github.io/use-package/installation/).
+
+```
+  (require 'package)
+  (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+  (unless (package-installed-p 'use-package)
+    (package-refresh-contents)
+    (package-install 'use-package))
+  (require 'use-package)
+
+  (use-package exec-in-buffer
+    :ensure t)
+```
+
+## Usage
 
 For example,
 
@@ -33,7 +49,7 @@ If a file matches multiple regexp, it will apply the programs in the order of th
 
 You can also run it interactively with `exec-in-buffer`, instead of using the save hook.
 
-# Why this package?
+## Why this package?
 
 You could of course use designated packages such as [clang-format-lite](https://github.com/arteen1000/clang-format-lite/) for your formatting needs; however, this one allows you to hook up arbitrary scripts to run "on-save" and format your buffer, reverting your view.
 
